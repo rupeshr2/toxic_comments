@@ -48,7 +48,7 @@ def run_prediction(request: Request, comment: str = Form(...)):
     tk.fit_on_texts(comment)
     index_list = tk.texts_to_sequences(comment)
     x_train = pad_sequences(index_list, maxlen=200)
-    #output = model.predict(x_train)
+    output = model.predict(x_train)
     indexes = np.argmax(output, axis=0)
     labels = ["toxic", "severe_toxic", "obscene", "threat", "insult", "identity_hate"]
     dict = {}
