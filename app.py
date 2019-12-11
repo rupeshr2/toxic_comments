@@ -1,17 +1,3 @@
-pip install uvicorn
-pip install virtualenv
-pip install virtualenvwrapper
-pip install --upgrade tensorflow
-pip install numpy
-pip install scikit-learn
-pip install pillow
-pip install h5py
-pip install keras
-pip install fastapi
-pip install email-validator
-pip install aiofiles
-pip install pandas
-
 import uvicorn
 from fastapi import FastAPI, Form
 from keras.models import model_from_json
